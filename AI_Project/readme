@@ -1,0 +1,32 @@
+# After Meeting AI - Stateless Microservice
+
+## Description
+
+This is a stateless AI microservice that provides:
+
+* Audio transcription
+* Meeting analysis (summary, tasks, attendees)
+* Semantic search
+
+## How to Run
+
+1. Create `.env` file:
+   OPENAI_API_KEY=your_key_here
+
+2. Install dependencies:
+   pip install -r requirements.txt
+
+3. Run server:
+   uvicorn api_main:app --reload
+
+4. Open Swagger UI:
+   http://127.0.0.1:8000/docs
+
+## Notes
+
+* This service is stateless (no database)
+* Backend is responsible for:
+
+  * Data storage
+  * Authentication
+  * Sending documents to search endpoint
